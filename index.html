@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training General MRP - AUDI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Portada -->
+        <div class="slide active" data-slide="1">
+            <div class="slide-content portada">
+                <div class="logo-area">
+                    <div class="sap-icon">SAP</div>
+                    <div class="audi-icon">AUDI</div>
+                </div>
+                <h1 class="main-title">Training General MRP</h1>
+                <h2 class="subtitle">para Gerencia de Disposición de Materiales AUDI</h2>
+                <p class="description">Programa de capacitación integral en SAP Material Requirements Planning</p>
+                <button class="btn btn--primary start-btn" onclick="nextSlide()">Comenzar Presentación</button>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 1 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 2: Agenda Completa -->
+        <div class="slide" data-slide="2">
+            <div class="slide-content">
+                <h1 class="slide-title">Programa de Capacitación - Overview</h1>
+                <div class="overview-grid">
+                    <div class="module-card" onclick="goToSlide(3)">
+                        <div class="module-number">Módulo 1</div>
+                        <h3>Fundamentos del MRP en SAP</h3>
+                        <p class="module-date">13 de noviembre 2025</p>
+                        <p class="module-duration">1 sesión</p>
+                    </div>
+                    <div class="module-card" onclick="goToSlide(6)">
+                        <div class="module-number">Módulo 2</div>
+                        <h3>Datos Maestros de Planeación</h3>
+                        <p class="module-date">20-21 de noviembre 2025</p>
+                        <p class="module-duration">2 sesiones</p>
+                    </div>
+                    <div class="module-card" onclick="goToSlide(9)">
+                        <div class="module-number">Módulo 3</div>
+                        <h3>Monitoreo de Excepciones y Análisis del MRP</h3>
+                        <p class="module-date">27 de noviembre 2025</p>
+                        <p class="module-duration">1 sesión</p>
+                    </div>
+                    <div class="module-card" onclick="goToSlide(11)">
+                        <div class="module-number">Módulo 4</div>
+                        <h3>Colaboración con Proveedores y Visibilidad Logística</h3>
+                        <p class="module-date">28 de noviembre 2025</p>
+                        <p class="module-duration">1 sesión</p>
+                    </div>
+                    <div class="module-card" onclick="goToSlide(13)">
+                        <div class="module-number">Módulo 5</div>
+                        <h3>Reportes, KPIs y Mejora Continua</h3>
+                        <p class="module-date">Por definir</p>
+                        <p class="module-duration">1 sesión</p>
+                    </div>
+                </div>
+                <div class="program-summary">
+                    <p><strong>Total de sesiones:</strong> 6 sesiones</p>
+                    <p><strong>Público objetivo:</strong> Gerencia de Disposición de Materiales AUDI</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 2 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 3: Módulo 1 Introducción -->
+        <div class="slide" data-slide="3">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 1</span>
+                    <h1 class="slide-title">Fundamentos del MRP en SAP</h1>
+                    <p class="session-date">13 de noviembre 2025 | 1 sesión</p>
+                </div>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <h3>Temas Principales</h3>
+                        <div class="topic-item">
+                            <span class="topic-icon">📊</span>
+                            <div>
+                                <strong>Tipos de MRP</strong>
+                                <p>PD, VB, VV, FX</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">⚙️</span>
+                            <div>
+                                <strong>Lógica de cálculo</strong>
+                                <p>NETCH, NETPL, NEUPL</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">🎯</span>
+                            <div>
+                                <strong>Parámetros principales</strong>
+                                <p>PTF, horizonte, stock de seguridad</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">📈</span>
+                            <div>
+                                <strong>Interpretación de resultados</strong>
+                                <p>MD04, MD03, MD05</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">🔒</span>
+                            <div>
+                                <strong>Planning Time Fence</strong>
+                                <p>Zonas congeladas y de planificación</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h3>Competencias a Desarrollar</h3>
+                        <ul class="competencies-list">
+                            <li>Identificar el tipo de MRP apropiado para cada material</li>
+                            <li>Configurar parámetros de planificación</li>
+                            <li>Interpretar resultados del MRP run</li>
+                            <li>Optimizar el planning time fence</li>
+                        </ul>
+                        <div class="objective-box">
+                            <h4>Objetivo</h4>
+                            <p>Comprender el comportamiento del MRP en SAP con base en los datos maestros y los parámetros de planificación utilizados actualmente, así como analizar determinados campos que pueden optimizar el cálculo del MRP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 3 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 4: Tipos de MRP -->
+        <div class="slide" data-slide="4">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 1 - Detalle</span>
+                    <h1 class="slide-title">Tipos de MRP</h1>
+                </div>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Nombre</th>
+                                <th>Aplicación</th>
+                                <th>Cuándo usar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>PD</strong></td>
+                                <td>MRP Planning</td>
+                                <td>Materiales con demanda dependiente</td>
+                                <td>Componentes que dependen del plan maestro de producción (MPS) y PIRs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VB</strong></td>
+                                <td>Manual Reorder Point</td>
+                                <td>Demanda estable y predecible</td>
+                                <td>Materiales de consumo regular donde se reordena al alcanzar punto mínimo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VV</strong></td>
+                                <td>Forecast-Based Planning</td>
+                                <td>Basado en consumo histórico</td>
+                                <td>Proyección de necesidades usando datos de consumo pasado</td>
+                            </tr>
+                            <tr>
+                                <td><strong>V1</strong></td>
+                                <td>Automatic Reorder Point</td>
+                                <td>Cálculo automático del punto de reorden</td>
+                                <td>Sistema calcula automáticamente basado en consumo y lead time</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="example-box">
+                    <h3>Ejemplo en Contexto Automotriz</h3>
+                    <p><strong>PD:</strong> Componentes específicos del motor (pistones, válvulas) que dependen del plan de producción de vehículos</p>
+                    <p><strong>VB:</strong> Materiales de consumo como tornillería estándar o lubricantes</p>
+                    <p><strong>VV:</strong> Partes de repuesto cuya demanda sigue patrones históricos</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 4 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 5: MD04 vs MD05 -->
+        <div class="slide" data-slide="5">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 1 - Detalle</span>
+                    <h1 class="slide-title">MD04 vs MD05: Interpretación de Resultados</h1>
+                </div>
+                <div class="comparison-cards">
+                    <div class="comparison-card">
+                        <h3>MD04 - Stock/Requirements List</h3>
+                        <div class="card-tag dynamic">Dinámico</div>
+                        <ul>
+                            <li>✓ Actualización en tiempo real</li>
+                            <li>✓ Refleja cambios inmediatos</li>
+                            <li>✓ Para ejecución diaria</li>
+                            <li>✓ Muestra situación actual del material</li>
+                        </ul>
+                        <p class="use-case"><strong>Cuándo usar:</strong> Para verificar disponibilidad actual y tomar decisiones operativas del día a día</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h3>MD05 - MRP List</h3>
+                        <div class="card-tag static">Estático</div>
+                        <ul>
+                            <li>📸 Snapshot del último MRP run</li>
+                            <li>📸 No cambia hasta próximo run</li>
+                            <li>📸 Para análisis de planificación</li>
+                            <li>📸 Muestra resultados del cálculo MRP</li>
+                        </ul>
+                        <p class="use-case"><strong>Cuándo usar:</strong> Para analizar resultados de planificación y exception messages del último run</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h3>MD03 - Display Planning Data</h3>
+                        <div class="card-tag info">Información</div>
+                        <ul>
+                            <li>ℹ️ Visualización de datos maestros</li>
+                            <li>ℹ️ Parámetros de planificación</li>
+                            <li>ℹ️ Configuración del material</li>
+                            <li>ℹ️ Sin datos transaccionales</li>
+                        </ul>
+                        <p class="use-case"><strong>Cuándo usar:</strong> Para revisar configuración y parámetros maestros del material</p>
+                    </div>
+                </div>
+                <div class="flow-diagram">
+                    <h3>Exception Messages</h3>
+                    <p>Códigos comunes: <strong>10</strong> (Reschedule in), <strong>15</strong> (Reschedule out), <strong>20</strong> (Cancel), <strong>96</strong> (Order proposal)</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 5 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 6: Módulo 2 Overview -->
+        <div class="slide" data-slide="6">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 2</span>
+                    <h1 class="slide-title">Datos Maestros de Planeación</h1>
+                    <p class="session-date">20-21 de noviembre 2025 | 2 sesiones</p>
+                </div>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <h3>Temas Principales</h3>
+                        <div class="topic-item">
+                            <span class="topic-icon">📋</span>
+                            <div>
+                                <strong>Vistas MRP del maestro de materiales</strong>
+                                <p>Campos específicos Audi (MRP 1, 2, 3, 4)</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">🛡️</span>
+                            <div>
+                                <strong>Safety Time vs Safety Stock</strong>
+                                <p>Diferencias y aplicaciones</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">⏱️</span>
+                            <div>
+                                <strong>Tiempos de entrega y tamaños de lote</strong>
+                                <p>Configuración de lead times y lot sizing</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">🔄</span>
+                            <div>
+                                <strong>Ajustes de stock por cambios de índices</strong>
+                                <p>Gestión de obsolescencia</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">🌳</span>
+                            <div>
+                                <strong>BOMs e interpretación</strong>
+                                <p>Demanda dependiente y estructuras multinivel</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h3>Competencias a Desarrollar</h3>
+                        <ul class="competencies-list">
+                            <li>Configurar correctamente maestros de materiales</li>
+                            <li>Gestionar safety stock y safety time</li>
+                            <li>Interpretar estructuras BOM</li>
+                            <li>Prevenir obsolescencia de materiales</li>
+                        </ul>
+                        <div class="objective-box">
+                            <h4>Objetivo</h4>
+                            <p>Asegurar que el disponente comprenda el uso de datos maestros para asegurar la calidad y consistencia de la información en la ejecución de los procesos de MRP futuros</p>
+                        </div>
+                        <div class="emphasis-box">
+                            <strong>Énfasis:</strong> Calidad y consistencia de datos como base para un MRP efectivo
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 6 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 7: Maestro de Materiales -->
+        <div class="slide" data-slide="7">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 2 - Detalle</span>
+                    <h1 class="slide-title">Maestro de Materiales: Vistas MRP</h1>
+                </div>
+                <div class="mrp-views-grid">
+                    <div class="mrp-view-card">
+                        <h3>MRP View 1</h3>
+                        <ul>
+                            <li>MRP Type (PD, VB, VV)</li>
+                            <li>MRP Controller</li>
+                            <li>Lot Size</li>
+                            <li>Planning Time Fence</li>
+                        </ul>
+                    </div>
+                    <div class="mrp-view-card">
+                        <h3>MRP View 2</h3>
+                        <ul>
+                            <li>Procurement Type</li>
+                            <li>Special Procurement</li>
+                            <li>Storage Location</li>
+                            <li>Production Supervisor</li>
+                        </ul>
+                    </div>
+                    <div class="mrp-view-card">
+                        <h3>MRP View 3</h3>
+                        <ul>
+                            <li>Strategy Group</li>
+                            <li>Consumption Mode</li>
+                            <li>Backward Consumption</li>
+                            <li>Forward Consumption</li>
+                        </ul>
+                    </div>
+                    <div class="mrp-view-card">
+                        <h3>MRP View 4</h3>
+                        <ul>
+                            <li>Assembly Scrap</li>
+                            <li>Shipping Setup Time</li>
+                            <li>In-house Production</li>
+                            <li>Takt Time</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="comparison-table-small">
+                    <h3>Safety Stock vs Safety Time</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Safety Stock</th>
+                                <th>Safety Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Naturaleza</strong></td>
+                                <td>Cantidad física de inventario</td>
+                                <td>Días adicionales en lead time</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Protección contra</strong></td>
+                                <td>Variabilidad de demanda</td>
+                                <td>Variabilidad de suministro</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Efecto</strong></td>
+                                <td>Incrementa nivel de inventario</td>
+                                <td>Adelanta fechas de orden</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="lot-sizing">
+                    <h3>Lot Sizing Procedures</h3>
+                    <p><strong>EX:</strong> Lot-for-Lot | <strong>FX:</strong> Fixed Lot Size | <strong>HB:</strong> Replenishment up to Maximum Stock Level</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 7 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 8: BOMs -->
+        <div class="slide" data-slide="8">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 2 - Detalle</span>
+                    <h1 class="slide-title">Bill of Materials (BOM)</h1>
+                </div>
+                <div class="bom-section">
+                    <h3>¿Qué es un BOM?</h3>
+                    <p class="definition">El Bill of Materials (Lista de Materiales) es una estructura jerárquica que define todos los componentes, sub-ensambles y materias primas necesarios para fabricar un producto final.</p>
+                </div>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <h3>Transacciones SAP para BOMs</h3>
+                        <div class="transaction-list">
+                            <div class="transaction-item">
+                                <strong>CS03</strong>
+                                <p>Display BOM - Ver lista de materiales individual</p>
+                            </div>
+                            <div class="transaction-item">
+                                <strong>CS11</strong>
+                                <p>Material BOM - Multilevel - Explosión multinivel completa</p>
+                            </div>
+                            <div class="transaction-item">
+                                <strong>CS15</strong>
+                                <p>Where-Used List - Dónde se usa un componente</p>
+                            </div>
+                        </div>
+                        <div class="demand-types">
+                            <h4>Tipos de Demanda</h4>
+                            <p><strong>Demanda Independiente:</strong> Producto final según pedidos de clientes</p>
+                            <p><strong>Demanda Dependiente:</strong> Componentes que dependen del producto final</p>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h3>Ejemplo: Estructura BOM Automotriz</h3>
+                        <div class="bom-tree">
+                            <div class="bom-level level-0">
+                                <span class="bom-icon">🚗</span> <strong>Vehículo Audi A4</strong>
+                            </div>
+                            <div class="bom-level level-1">
+                                <span class="bom-icon">⚙️</span> Motor 2.0 TFSI
+                            </div>
+                            <div class="bom-level level-2">
+                                <span class="bom-icon">🔧</span> Block de Motor
+                            </div>
+                            <div class="bom-level level-2">
+                                <span class="bom-icon">🔧</span> Pistones (4 unidades)
+                            </div>
+                            <div class="bom-level level-2">
+                                <span class="bom-icon">🔧</span> Sistema de Inyección
+                            </div>
+                            <div class="bom-level level-1">
+                                <span class="bom-icon">⚙️</span> Transmisión S-Tronic
+                            </div>
+                            <div class="bom-level level-1">
+                                <span class="bom-icon">⚙️</span> Carrocería
+                            </div>
+                            <div class="bom-level level-1">
+                                <span class="bom-icon">⚙️</span> Interior &amp; Electrónica
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interpretation-box">
+                    <h3>Interpretación para MRP</h3>
+                    <p>El MRP explota el BOM para calcular automáticamente la demanda de todos los componentes basándose en el plan de producción del producto final. Cada nivel del BOM se planifica según sus lead times específicos.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 8 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 9: Módulo 3 Overview -->
+        <div class="slide" data-slide="9">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 3</span>
+                    <h1 class="slide-title">Monitoreo de Excepciones y Análisis del MRP</h1>
+                    <p class="session-date">27 de noviembre 2025 | 1 sesión</p>
+                </div>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <h3>Temas Principales</h3>
+                        <div class="topic-item">
+                            <span class="topic-icon">🚨</span>
+                            <div>
+                                <strong>Logs de salida del MRP</strong>
+                                <p>Exception messages y su interpretación</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">📅</span>
+                            <div>
+                                <strong>Scheduling lines en MD05</strong>
+                                <p>Identificación de problemas y correcciones</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">✅</span>
+                            <div>
+                                <strong>Checklist de validación de call-off</strong>
+                                <p>Candados MRP-relevantes y verificaciones</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h3>Competencias a Desarrollar</h3>
+                        <ul class="competencies-list">
+                            <li>Analizar exception messages</li>
+                            <li>Identificar problemas en scheduling lines</li>
+                            <li>Aplicar checklist de validación</li>
+                            <li>Tomar decisiones basadas en excepciones</li>
+                        </ul>
+                        <div class="objective-box">
+                            <h4>Objetivo</h4>
+                            <p>Desarrollar la habilidad para interpretar correctamente las señales del MRP y tomar decisiones rápidas y efectivas</p>
+                        </div>
+                        <div class="best-practices">
+                            <h4>Buenas Prácticas</h4>
+                            <ul>
+                                <li>Revisar exception messages diariamente</li>
+                                <li>Priorizar por impacto en producción</li>
+                                <li>Documentar acciones tomadas</li>
+                                <li>Analizar tendencias semanalmente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 9 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 10: Exception Messages -->
+        <div class="slide" data-slide="10">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 3 - Detalle</span>
+                    <h1 class="slide-title">Exception Messages: Códigos y Acciones</h1>
+                </div>
+                <div class="exception-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Significado</th>
+                                <th>Acción Requerida</th>
+                                <th>Prioridad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="priority-high">
+                                <td><strong>10</strong></td>
+                                <td>Reschedule In</td>
+                                <td>Adelantar fecha de entrega/producción para cumplir con demanda</td>
+                                <td><span class="priority-badge high">Alta</span></td>
+                            </tr>
+                            <tr class="priority-medium">
+                                <td><strong>15</strong></td>
+                                <td>Reschedule Out</td>
+                                <td>Posponer fecha de entrega/producción, hay exceso</td>
+                                <td><span class="priority-badge medium">Media</span></td>
+                            </tr>
+                            <tr class="priority-high">
+                                <td><strong>20</strong></td>
+                                <td>Cancel</td>
+                                <td>Cancelar orden planificada o de compra, ya no necesaria</td>
+                                <td><span class="priority-badge high">Alta</span></td>
+                            </tr>
+                            <tr class="priority-low">
+                                <td><strong>96</strong></td>
+                                <td>Order Proposal</td>
+                                <td>Nueva propuesta de orden para cubrir demanda</td>
+                                <td><span class="priority-badge low">Baja</span></td>
+                            </tr>
+                            <tr class="priority-medium">
+                                <td><strong>06</strong></td>
+                                <td>Release Immediately</td>
+                                <td>Liberar orden de inmediato para evitar faltante</td>
+                                <td><span class="priority-badge medium">Media</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <h3>Proceso de Resolución</h3>
+                        <ol class="process-steps">
+                            <li>Identificar exception messages en MD05</li>
+                            <li>Clasificar por prioridad e impacto</li>
+                            <li>Analizar causa raíz del mensaje</li>
+                            <li>Ejecutar acción correctiva</li>
+                            <li>Verificar resolución en siguiente MRP run</li>
+                            <li>Documentar en AMS si es recurrente</li>
+                        </ol>
+                    </div>
+                    <div class="right-column">
+                        <h3>Análisis de Trends</h3>
+                        <p>Es importante monitorear <strong>tendencias</strong> en exception messages:</p>
+                        <ul>
+                            <li>Incremento sostenido de mensajes tipo 10 = posible problema de capacidad</li>
+                            <li>Muchos mensajes tipo 15 = sobreplanificación o forecast inflado</li>
+                            <li>Messages tipo 20 recurrentes = inestabilidad en demanda</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>💡 Tip:</strong> Crear reporte semanal de exception message trends para identificar patrones y oportunidades de mejora.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 10 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 11: Módulo 4 Overview -->
+        <div class="slide" data-slide="11">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 4</span>
+                    <h1 class="slide-title">Colaboración con Proveedores y Visibilidad Logística</h1>
+                    <p class="session-date">28 de noviembre 2025 | 1 sesión</p>
+                </div>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <h3>Temas Principales</h3>
+                        <div class="topic-item">
+                            <span class="topic-icon">📦</span>
+                            <div>
+                                <strong>ASN y confirmaciones</strong>
+                                <p>Advanced Shipping Notice y proceso de confirmación</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">🚚</span>
+                            <div>
+                                <strong>JIT/JIS Supply</strong>
+                                <p>Tier 1 (directo a línea) vs Tier 2 (a almacén)</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">⏰</span>
+                            <div>
+                                <strong>Lead time prioritization</strong>
+                                <p>Gestión de tiempos de entrega y procesamiento</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">🔗</span>
+                            <div>
+                                <strong>Interfaz EBON</strong>
+                                <p>Monitoreo de órdenes provisionales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h3>Competencias a Desarrollar</h3>
+                        <ul class="competencies-list">
+                            <li>Gestionar ASN de proveedores</li>
+                            <li>Distinguir entre JIT y JIS</li>
+                            <li>Configurar lead times correctamente</li>
+                            <li>Monitorear interfaces con proveedores</li>
+                        </ul>
+                        <div class="objective-box">
+                            <h4>Objetivo</h4>
+                            <p>Mejorar la comunicación y sincronización con proveedores para garantizar continuidad en el suministro</p>
+                        </div>
+                        <div class="visibility-box">
+                            <h4>Visibilidad Logística</h4>
+                            <p>La visibilidad de entregas en tránsito es crítica para anticipar problemas y tomar decisiones proactivas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 11 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 12: JIT/JIS -->
+        <div class="slide" data-slide="12">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 4 - Detalle</span>
+                    <h1 class="slide-title">Just-In-Time (JIT) vs Just-In-Sequence (JIS)</h1>
+                </div>
+                <div class="comparison-cards-large">
+                    <div class="jit-card">
+                        <h3>Tier 1 - JIT (Just-In-Time)</h3>
+                        <div class="card-tag jit">Directo a Línea</div>
+                        <ul>
+                            <li><strong>Destino:</strong> Entrega directa a línea de producción</li>
+                            <li><strong>Frecuencia:</strong> Múltiples entregas diarias</li>
+                            <li><strong>Sincronización:</strong> Estricta coordinación con plan de producción</li>
+                            <li><strong>Inventario:</strong> Minimizado, sin almacenamiento intermedio</li>
+                            <li><strong>Riesgo:</strong> Alto - cualquier retraso impacta producción</li>
+                        </ul>
+                        <div class="example-box-small">
+                            <strong>Ejemplo:</strong> Asientos del vehículo entregados directamente a la estación de ensamble, sincronizados con el modelo específico en producción.
+                        </div>
+                    </div>
+                    <div class="jis-card">
+                        <h3>Tier 2 - JIS (Just-In-Sequence)</h3>
+                        <div class="card-tag jis">Entrega a Almacén</div>
+                        <ul>
+                            <li><strong>Destino:</strong> Entrega a almacén/buffer</li>
+                            <li><strong>Secuencia:</strong> Orden específica según secuencia de producción</li>
+                            <li><strong>Stock:</strong> Stock virtual en consignación posible</li>
+                            <li><strong>Flexibilidad:</strong> Mayor buffer para cambios menores</li>
+                            <li><strong>Gestión:</strong> Requiere gestión de almacén intermedio</li>
+                        </ul>
+                        <div class="example-box-small">
+                            <strong>Ejemplo:</strong> Paneles de puertas entregados en secuencia específica al almacén, desde donde se alimenta la línea según necesidad.
+                        </div>
+                    </div>
+                </div>
+                <div class="process-flow">
+                    <h3>Flujo del Proceso JIT/JIS</h3>
+                    <div class="flow-steps">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <strong>Call-off generado</strong>
+                                <p>MRP genera necesidad</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <strong>Señal al proveedor</strong>
+                                <p>EDI/Portal</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <strong>ASN recibido</strong>
+                                <p>Confirmación de envío</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <strong>Entrega</strong>
+                                <p>JIT/JIS según tipo</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <strong>Goods Receipt</strong>
+                                <p>Actualización en SAP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="consignment-info">
+                    <h3>Stock Virtual en Consignación</h3>
+                    <p>Materiales físicamente presentes en planta de AUDI pero propiedad del proveedor hasta su consumo. Reduce capital de trabajo sin comprometer disponibilidad.</p>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 12 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 13: Módulo 5 Overview -->
+        <div class="slide" data-slide="13">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 5</span>
+                    <h1 class="slide-title">Reportes, KPIs y Mejora Continua</h1>
+                    <p class="session-date">Por definir | 1 sesión</p>
+                </div>
+                <div class="two-column-layout">
+                    <div class="left-column">
+                        <h3>Temas Principales</h3>
+                        <div class="topic-item">
+                            <span class="topic-icon">📊</span>
+                            <div>
+                                <strong>Tipos de reportes</strong>
+                                <p>Reportes estándar (MC46, MC.9) y queries personalizadas</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">📈</span>
+                            <div>
+                                <strong>KPIs del MRP</strong>
+                                <p>Métricas clave de desempeño y seguimiento</p>
+                            </div>
+                        </div>
+                        <div class="topic-item">
+                            <span class="topic-icon">📝</span>
+                            <div>
+                                <strong>Proceso AMS de documentación</strong>
+                                <p>Application Management Services e incidentes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h3>Competencias a Desarrollar</h3>
+                        <ul class="competencies-list">
+                            <li>Generar reportes de análisis</li>
+                            <li>Medir KPIs del MRP</li>
+                            <li>Documentar incidentes</li>
+                            <li>Implementar mejora continua</li>
+                        </ul>
+                        <div class="objective-box">
+                            <h4>Objetivo</h4>
+                            <p>Pasar de una gestión reactiva a una planeación proactiva basada en datos y desempeño</p>
+                        </div>
+                        <div class="continuous-improvement">
+                            <h4>Mejora Continua</h4>
+                            <p>El análisis sistemático de KPIs permite identificar oportunidades de optimización y prevenir problemas recurrentes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 13 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 14: KPIs -->
+        <div class="slide" data-slide="14">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 5 - Detalle</span>
+                    <h1 class="slide-title">KPIs del MRP: Métricas Clave</h1>
+                </div>
+                <div class="kpis-grid">
+                    <div class="kpi-card">
+                        <h3>On-time Delivery Rate</h3>
+                        <div class="kpi-formula">
+                            <strong>Fórmula:</strong> (Órdenes a tiempo / Total órdenes) × 100
+                        </div>
+                        <div class="kpi-target">
+                            <strong>Objetivo:</strong> <span class="target-value">&gt; 95%</span>
+                        </div>
+                        <p>Mide el cumplimiento de entregas según fecha comprometida. Indicador clave de confiabilidad del proceso.</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Shortage-Caused Downtime</h3>
+                        <div class="kpi-formula">
+                            <strong>Fórmula:</strong> (Horas paradas / Horas disponibles) × 100
+                        </div>
+                        <div class="kpi-target">
+                            <strong>Objetivo:</strong> <span class="target-value">&lt; 2%</span>
+                        </div>
+                        <p>Tiempo de producción perdido debido a falta de materiales. Costo directo de planificación inadecuada.</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Excess Inventory</h3>
+                        <div class="kpi-formula">
+                            <strong>Fórmula:</strong> Inventario total - Inventario objetivo
+                        </div>
+                        <div class="kpi-target">
+                            <strong>Objetivo:</strong> <span class="target-value">Minimizar</span>
+                        </div>
+                        <p>Inventario por encima de niveles planificados. Indica sobreplanificación o cambios en demanda.</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>PO Change Rate</h3>
+                        <div class="kpi-formula">
+                            <strong>Fórmula:</strong> (Cambios en POs / Total POs) × 100
+                        </div>
+                        <div class="kpi-target">
+                            <strong>Objetivo:</strong> <span class="target-value">&lt; 15%</span>
+                        </div>
+                        <p>Frecuencia de modificaciones a órdenes de compra. Refleja estabilidad del plan de materiales.</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Orders Without Materials</h3>
+                        <div class="kpi-formula">
+                            <strong>Medición:</strong> Órdenes de producción sin materiales asignados
+                        </div>
+                        <div class="kpi-target">
+                            <strong>Objetivo:</strong> <span class="target-value">0</span>
+                        </div>
+                        <p>Órdenes que no pueden ejecutarse por falta de componentes. Indicador crítico de planning.</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Exception Message Trends</h3>
+                        <div class="kpi-formula">
+                            <strong>Fórmula:</strong> Mensajes período actual / Mensajes período anterior
+                        </div>
+                        <div class="kpi-target">
+                            <strong>Objetivo:</strong> <span class="target-value">Tendencia ↓</span>
+                        </div>
+                        <p>Evolución de mensajes de excepción en el tiempo. Indica mejora o deterioro del proceso.</p>
+                    </div>
+                </div>
+                <div class="dashboard-example">
+                    <h3>Dashboard de Métricas</h3>
+                    <p>Los KPIs deben visualizarse en un dashboard consolidado que permita:</p>
+                    <ul>
+                        <li>Monitoreo en tiempo real de indicadores críticos</li>
+                        <li>Comparación con períodos anteriores y objetivos</li>
+                        <li>Alertas automáticas cuando se desvían de meta</li>
+                        <li>Drill-down para análisis de causa raíz</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 14 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 15: Roadmap -->
+        <div class="slide" data-slide="15">
+            <div class="slide-content">
+                <h1 class="slide-title">Roadmap del Programa y Próximos Pasos</h1>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">13 Nov 2025</div>
+                        <div class="timeline-content">
+                            <h3>Módulo 1: Fundamentos del MRP en SAP</h3>
+                            <p>1 sesión - Bases del sistema MRP</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">20-21 Nov 2025</div>
+                        <div class="timeline-content">
+                            <h3>Módulo 2: Datos Maestros de Planeación</h3>
+                            <p>2 sesiones - Calidad de datos</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">27 Nov 2025</div>
+                        <div class="timeline-content">
+                            <h3>Módulo 3: Monitoreo de Excepciones y Análisis</h3>
+                            <p>1 sesión - Interpretación de señales</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">28 Nov 2025</div>
+                        <div class="timeline-content">
+                            <h3>Módulo 4: Colaboración con Proveedores</h3>
+                            <p>1 sesión - Sincronización supply chain</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Por definir</div>
+                        <div class="timeline-content">
+                            <h3>Módulo 5: Reportes, KPIs y Mejora Continua</h3>
+                            <p>1 sesión - Gestión proactiva</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-summary-final">
+                    <div class="summary-card">
+                        <h3>Total del Programa</h3>
+                        <p><strong>6 sesiones</strong> de capacitación integral</p>
+                        <p>De gestión reactiva a planeación proactiva</p>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Recursos Adicionales</h3>
+                        <ul>
+                            <li>Documentación SAP específica de AUDI</li>
+                            <li>Manuales de usuario actualizados</li>
+                            <li>Casos de estudio reales</li>
+                            <li>Soporte continuo vía AMS</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3>Contacto</h3>
+                        <p>Para más información sobre el programa:</p>
+                        <p><strong>Gerencia de Disposición de Materiales AUDI</strong></p>
+                        <p>Training &amp; Development Team</p>
+                    </div>
+                </div>
+                <div class="cta-section">
+                    <h2>¡Prepárate para optimizar la gestión de materiales!</h2>
+                    <button class="btn btn--primary" onclick="goToSlide(2)">Revisar Módulos</button>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 15 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 16: Módulo 2 - Vistas MRP 1 Detallada -->
+        <div class="slide" data-slide="16">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 2 - Análisis Detallado</span>
+                    <h1 class="slide-title">MRP View 1: Campos y Configuración</h1>
+                </div>
+                <div class="detail-section">
+                    <h3>MRP Type (DISMM) - Análisis Profundo</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Valor</th>
+                                <th>Descripción</th>
+                                <th>Comportamiento MRP</th>
+                                <th>Ejemplo AUDI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>PD</strong></td>
+                                <td>MRP Planning</td>
+                                <td>Explota BOM, crea demanda dependiente</td>
+                                <td>Motores, transmisiones, componentes con BOM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VB</strong></td>
+                                <td>Manual Reorder Point</td>
+                                <td>Genera orden cuando stock &lt; reorder point</td>
+                                <td>Consumibles, tornillería, lubricantes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VV</strong></td>
+                                <td>Forecast-Based</td>
+                                <td>Usa pronóstico histórico</td>
+                                <td>Refacciones, partes de servicio</td>
+                            </tr>
+                            <tr>
+                                <td><strong>V1</strong></td>
+                                <td>Automatic Reorder</td>
+                                <td>Cálculo automático de punto de reorden</td>
+                                <td>Materiales clase C de bajo valor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="two-column-layout" style="margin-top: 24px;">
+                    <div class="left-column">
+                        <h3>MRP Controller (DISPO)</h3>
+                        <div class="info-box">
+                            <p><strong>Responsable:</strong> Identificador del planificador responsable</p>
+                            <p><strong>Códigos típicos:</strong> 001, 002, 003</p>
+                            <p><strong>Agrupación:</strong> Por familia de productos o categoría</p>
+                            <p><strong>Uso:</strong> Filtros en MD04, MD05, MD06</p>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <h3>ABC Indicator (MAABC)</h3>
+                        <div class="info-box">
+                            <p><strong>A:</strong> Critical items, alto valor, control estricto</p>
+                            <p><strong>B:</strong> Important items, valor medio, control moderado</p>
+                            <p><strong>C:</strong> Low value items, control simple</p>
+                            <p><strong>Impacto:</strong> Determina nivel de monitoreo y frecuencia de revisión</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 16 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 17: MRP View 2 Completa -->
+        <div class="slide" data-slide="17">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 2 - Análisis Detallado</span>
+                    <h1 class="slide-title">MRP View 2: Parámetros Críticos</h1>
+                </div>
+                <div class="comparison-table">
+                    <h3>Campos Principales de MRP 2</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Campo</th>
+                                <th>Descripción</th>
+                                <th>Unidad</th>
+                                <th>Impacto en MRP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Safety Stock (EISBE)</strong></td>
+                                <td>Buffer de cantidad física</td>
+                                <td>Unidades</td>
+                                <td>NO disponible para MRP, protege contra variabilidad demanda</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safety Time (BSTFE)</strong></td>
+                                <td>Días adicionales en lead time</td>
+                                <td>Días</td>
+                                <td>Adelanta fechas de procurement, protege contra variabilidad suministro</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan Delivery Time (PLIFZ)</strong></td>
+                                <td>Tiempo del proveedor + transporte</td>
+                                <td>Calendar days</td>
+                                <td>Define cuándo ordenar material externo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>GR Processing Time (WEBAZ)</strong></td>
+                                <td>Tiempo interno post-recepción</td>
+                                <td>Workdays</td>
+                                <td>Descarga + QA + Put-away hasta disponibilidad</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Service Level (SERNR)</strong></td>
+                                <td>Nivel de servicio objetivo</td>
+                                <td>%</td>
+                                <td>Determina factor R para cálculo de safety stock</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="formula-box" style="margin-top: 24px; background: var(--color-bg-1); padding: 24px; border-radius: 12px;">
+                    <h3>Fórmula Completa de Safety Stock</h3>
+                    <p style="font-size: 18px; text-align: center; margin: 16px 0;"><strong>SS = R × √W × MAD</strong></p>
+                    <div class="two-column-layout">
+                        <div class="left-column">
+                            <p><strong>R:</strong> Safety factor del service level</p>
+                            <ul style="list-style: none; padding-left: 16px;">
+                                <li>90% → R = 1.28</li>
+                                <li>95% → R = 1.65</li>
+                                <li>99% → R = 2.33</li>
+                                <li>99.5% → R = 2.58</li>
+                            </ul>
+                        </div>
+                        <div class="right-column">
+                            <p><strong>W:</strong> Replenishment Lead Time en períodos</p>
+                            <p><strong>MAD:</strong> Mean Absolute Deviation del forecast</p>
+                            <p><strong>Ejemplo:</strong> Service Level = 95%, Lead Time = 21 días (3 semanas), MAD = 50 units/week</p>
+                            <p><strong>Cálculo:</strong> SS = 1.65 × √3 × 50 = 1.65 × 1.73 × 50 = <strong>143 units</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 17 de 42</span>
+            </div>
+        </div>
+
+        <!-- Slide 18: Safety Stock vs Safety Time Profundo -->
+        <div class="slide" data-slide="18">
+            <div class="slide-content">
+                <div class="module-header">
+                    <span class="module-badge">Módulo 2 - Concepto Crítico</span>
+                    <h1 class="slide-title">Safety Stock vs Safety Time: Análisis Completo</h1>
+                </div>
+                <div class="comparison-cards">
+                    <div class="comparison-card">
+                        <h3>Safety Stock</h3>
+                        <div class="card-tag dynamic">Buffer de CANTIDAD</div>
+                        <p><strong>Naturaleza:</strong> Inventario físico adicional</p>
+                        <p><strong>Propósito:</strong> Protección contra variabilidad de DEMANDA</p>
+                        <p><strong>Mecanismo:</strong> MRP NO puede usar este stock para planning</p>
+                        <p><strong>Efecto:</strong> AUMENTA nivel de inventario promedio</p>
+                        <div class="example-box" style="margin-top: 16px;">
+                            <strong>Ejemplo Numérico:</strong>
+                            <p>Material: Componente electrónico</p>
+                            <p>Safety Stock configurado: 100 units</p>
+                            <p>Stock actual: 150 units</p>
+                            <p>Requirement: 60 units</p>
+                            <p><strong>MRP ve:</strong> 150 - 100 = 50 units disponibles</p>
+                            <p><strong>Resultado:</strong> MRP genera orden por 10 units (60 - 50)</p>
+                            <p><strong>Stock físico post-consumo:</strong> 150 - 60 = 90 units (por debajo de SS, genera alerta)</p>
+                        </div>
+                    </div>
+                    <div class="comparison-card">
+                        <h3>Safety Time</h3>
+                        <div class="card-tag static">Buffer de TIEMPO</div>
+                        <p><strong>Naturaleza:</strong> Días adicionales en lead time</p>
+                        <p><strong>Propósito:</strong> Protección contra variabilidad de SUMINISTRO</p>
+                        <p><strong>Mecanismo:</strong> MRP adelanta la fecha de requirement simulativamente</p>
+                        <p><strong>Efecto:</strong> ADELANTA fechas de procurement, NO aumenta inventario promedio</p>
+                        <div class="example-box" style="margin-top: 16px;">
+                            <strong>Ejemplo Numérico:</strong>
+                            <p>Material: Componente importado</p>
+                            <p>Safety Time configurado: 3 días</p>
+                            <p>Plan Delivery Time: 21 días</p>
+                            <p>Requirement real: 30-March</p>
+                            <p><strong>MRP calcula:</strong> 30-March - 3 days = 27-March</p>
+                            <p><strong>Planned order finish:</strong> 27-March</p>
+                            <p><strong>Planned order start:</strong> 27-March - 21 days = 6-March</p>
+                            <p><strong>Entrega esperada:</strong> 27-March (3 días antes del requirement real)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="decision-matrix" style="margin-top: 24px; background: var(--color-bg-2); padding: 24px; border-radius: 12px;">
+                    <h3>Decision Matrix: Cuándo usar cada uno</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Situación</th>
+                                <th>Recomendación</th>
+                                <th>Justificación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alta variabilidad de demanda</td>
+                                <td><strong>Safety Stock</strong></td>
+                                <td>Buffer físico absorbe picos inesperados de consumo</td>
+                            </tr>
+                            <tr>
+                                <td>Alta variabilidad de lead time proveedor</td>
+                                <td><strong>Safety Time</strong></td>
+                                <td>Adelanta procurement sin aumentar inventario</td>
+                            </tr>
+                            <tr>
+                                <td>Proveedor internacional con riesgo logístico</td>
+                                <td><strong>Safety Time</strong></td>
+                                <td>Compensa delays en transporte (aduanas, climas, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td>Material crítico (A) con forecast inestable</td>
+                                <td><strong>Safety Stock</strong></td>
+                                <td>Protege línea de producción contra cambios de demand</td>
+                            </tr>
+                            <tr>
+                                <td>Alto costo de inventario (financiero)</td>
+                                <td><strong>Safety Time</strong></td>
+                                <td>Minimiza carrying cost, solo adelanta timing</td>
+                            </tr>
+                            <tr>
+                                <td>Ambas variabilidades (demanda + suministro)</td>
+                                <td><strong>SS + ST combinados</strong></td>
+                                <td>Protección dual: cantidad + tiempo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="slide-footer">
+                <span>Slide 18 de 42</span>
+            </div>
+        </div>
+
+        <!-- Continue with remaining slides 19-42 in next update -->
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="nav-controls">
+        <button class="nav-btn nav-btn-prev" onclick="prevSlide()" id="prevBtn">
+            <span>←</span>
+        </button>
+        <div class="nav-dots" id="navDots"></div>
+        <button class="nav-btn nav-btn-next" onclick="nextSlide()" id="nextBtn">
+            <span>→</span>
+        </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
